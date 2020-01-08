@@ -1,0 +1,86 @@
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Nav Logo -->
+            <a class="navbar-brand" href="index.html"><img src="img/ha-logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="img/menu-w.png"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Nav menu ul-->
+                <a class="nav-home" href="index.html"><img src="img/home-icon.png"></a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="itelearning.html">Health IT eLearning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="training.html">Traing, Sharing & trainings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="research.html">Industry Research & <br/>Knowledge Base</a> <span class="dropdown-toggle"><img src="img/down-arrow.png"></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="research-benchmark.html">Industry Figures and Benchmark</a></li>
+                            <li><a href="research-cases.html">Health IT Case Studies</a></li>
+                            <li><a href="research-trends.html">Health IT Innovation and Trends</a></li>
+                            <li><a href="research-overview.html">HA IT & HI Overview and Figures</a></li>
+                            <li><a href="research-viewpoints.html">Our Viewpoints</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Nav Topright Member -->
+                <div class="menu-topright">
+                    <a class="menu-member-btn" href="#membership"><img src="img/user.png"></a>
+                    <span>Guest</span>
+                    <div class="menu-loginout">
+                        <!-- if logged out-->
+                        <div class="login">
+                            <button type="button" class="" data-toggle="modal" data-target="#loginModal">
+                                Login
+                            </button>
+                        </div>
+                        <!-- if logged in-->
+                        <div class="logout"><a href="">LOGOUT</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Login</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Please login with your HA CORP ID</p>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="login-ID" placeholder="CORP ID">
+          </div>
+          <div class="form-group">
+                <input type="text" class="form-control" id="login-password" placeholder="Password">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="login-submit">Submit</button>
+        <button type="button" class="login-close" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+
+    $('ul.navbar-nav li.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(400);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(400);
+    });
+</script>

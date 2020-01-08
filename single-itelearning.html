@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale = 1">
+    <title>HA UI development</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="single-itelearning">
+    <div class="nav-container"></div>
+
+    <!-- Page Title Row -->
+    <div class="pagetitle-row align-middle d-flex">
+        <div class="container align-self-center">
+           <div class="row">
+               <div>
+                <span class="singlepost-cate">Health IT eLearning</span>
+                <h3 class="singlepost-title">Patient Master Index (PMI) & Patient Registration Training for HA Staff</h3>
+                <div class="singlepost-tags">
+                    <a href="search.html">#Patient Master Index</a><a href="search.html">#PMI</a><a href="search.html">#PMI</a>
+                </div>
+            </div>
+           </div> 
+        </div>
+    </div>
+    <div class="container singlepost-content-container">
+        <div id="singlepost-content">
+            <p>https://elc.home/eLearningProgram.aspx?org=970&prog=E1239
+
+            This courseware serves as a structured self-learning kit for staff who work with Diagnosis / Procedure data. It provides a fundamental knowledge on Terminology Management Principles, Hong Kong Clinical Terminology Table (HKCTT) with focus on Diagnosis and Procedure and its applications and maintenance.
+            
+            This courseware covers six chapters to cater for the learning need of staff with different job portfolios:
+            
+            1. Hong Kong Clinical Terminology Table (HKCTT) - Diagnosis & Procedure
+            2. Reference terminologies for Diagnosis & Procedure and code assignment for International Classification of Diseases and Related Health  Problems (ICD)
+            3. Terminology management principles
+            4. Reporting Diagnoses & Provedures in Clinical Management System (CMS)
+            5. Principles in reporting Diagnosis & Procedure
+            6. Procedure categorization</p>
+
+            <div id="singlepost-enter"><a href="">ENTER</a></div>
+
+        </div>
+    </div> 
+    <div class="singlepost-nav container">
+        <div class="row">
+            <div id="singlepost-nav-prev" class="col-5"><a href="#"><img src="img/left-arrow.png"> PREVIOUS</a></div>
+            <div id="singlepost-nav-menu" class="col-2"><a href="index.html"><img src="img/singlepost-menu-icon.png"></a></div>
+            <div id="singlepost-nav-next" class="col-5"><a href="#">NEXT <img src="img/right-arrow.png"></a></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <a href="">Personal Data Collection Statement</a>
+                    <a href="">Sitemap</a>
+                </div>
+                <div class="col-md-6 copyright">
+                    © 2019 Hospital Auhority. All Rights Reserved.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+</body>
+
+<script src="jquery.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+        $('.nav-container').load('nav.html')
+    })
+    $('ul.navbar-nav li.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(400);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(400);
+    });
+</script>
+
+</html>
