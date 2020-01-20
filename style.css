@@ -8,6 +8,17 @@ a:hover {
 img {
     max-width:100%;
 }
+*:focus {
+    stroke: none;
+    outline: none;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
 
 /****** Nav ******/
 
@@ -686,6 +697,16 @@ button.navbar-toggler {
     margin: 0px;
     margin-bottom: 2px;
 }
+.singletraining-info-row .training-venue a {
+    color: #fff;
+    text-decoration: underline;
+}
+.singletraining-info-row .training-venue a:hover {
+    background-color: #fff;
+    color: #c11b1b !important;
+    padding: 2px 5px;
+    margin-left: -5px;
+}
 .singletraining-info-row {
     background: #c11b1b;
     color: #fff;
@@ -759,20 +780,95 @@ a.material-link:hover {
     color: #fff;
     text-align: right;
 }
-#training-videos {
+#training-videoalbum {
     margin-bottom: 30px;
 }
 #training-photoalbum {
     margin-bottom: 40px;
     margin-top: 40px;
 }
-#training-photoalbum a, #training-videos a {
+#training-photoalbum a, #training-videoalbum a {
     background: #c11a1a;
     color: #fff;
     padding: 1px 11px;
     display: inline-block;
     font-size: 15px;
     margin-left: 10px;
+}
+
+.photoalbum-img, .videoalbum-img {
+    width: 20%;
+    cursor: pointer;
+    padding: 4px;
+}
+.popup_training_photoalbum_container, .popup_training_videoalbum_container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    top: 0;
+    z-index: -999;
+    visibility:hidden;
+    left: 0;
+
+}
+.swiper-container {
+    overflow: hidden !important;
+}
+.swiper-button-prev:after {
+    background: url(img/album-left.png);
+    font-size: 0px !important;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:none !important;
+}
+.swiper-button-next, .swiper-button-prev {
+    background: rgba(0, 0, 0, 0.4);
+    width: 36px !important;
+    padding: 10px 10px;
+}
+.swiper-button-next:after {
+    background: url(img/album-right.png);
+    font-size: 0px !important;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-size: contain;
+    background-color:none !important;
+    background-repeat: no-repeat;
+}
+#training_videoalbum_row .swiper-slide.swiper-slide-active {
+    opacity: 1;
+}
+#training_videoalbum_row .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0;
+}
+.training_photoalbum_thumb .swiper-slide:not(.swiper-slide-thumb-active), .training_videoalbum_thumb .swiper-slide:not(.swiper-slide-thumb-active) {
+    opacity: 0.5;
+}
+.popup_training_photoalbum, .popup_training_videoalbum {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    max-width: 90vw;
+    background: #fff;
+    padding: 20px;
+}
+p#popup-gallery-close {
+    width: 25px;
+    cursor:pointer;
+}
+div#training_photoalbum_thumb_row, div#training_videoalbum_thumb_row {
+    margin-top: 15px;
+}
+div#training-photoalbum .row {
+    margin: 0px -4px;
 }
 div#enrollModal .modal-content .row {
     margin-bottom: 20px;
